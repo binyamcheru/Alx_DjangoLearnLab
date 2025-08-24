@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Book Form</title>
+    <meta charset="UTF-8" />
+    <title>Example Form</title>
 </head>
 <body>
-    <h2>Create Book</h2>
-    <form method="POST">
-        {% csrf_token %}  <!-- Protect against CSRF -->
+    <h1>Submit Book</h1>
+    <form method="post">
+        {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>

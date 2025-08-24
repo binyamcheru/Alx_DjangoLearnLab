@@ -1,5 +1,12 @@
 from bookshelf.models import Book
-In [4]: book.delete()
-   ...: print(Book.objects.all())  # Should show an empty queryset     
-   ...:
-<QuerySet []>
+
+# Delete the book
+book = Book.objects.get(title="Nineteen Eighty-Four")
+book.delete()
+
+# Try to retrieve all books
+books = Book.objects.all()
+print(books)
+
+# Output:
+# <QuerySet []>
